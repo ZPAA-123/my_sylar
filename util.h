@@ -1,5 +1,12 @@
-//  常用的工具函数
- #ifndef __SYLAR_UTIL_H__
+/**
+ * @file util.h
+ * @brief 常用的工具函数
+ * @author sylar.yin
+ * @email 564628276@qq.com
+ * @date 2019-05-27
+ * @copyright Copyright (c) 2019年 sylar.yin All rights reserved (www.sylar.top)
+ */
+#ifndef __SYLAR_UTIL_H__
 #define __SYLAR_UTIL_H__
 
 #include <cxxabi.h>
@@ -16,6 +23,10 @@
 #include <yaml-cpp/yaml.h>
 #include <iostream>
 #include <boost/lexical_cast.hpp>
+#include <google/protobuf/message.h>
+// #include "sylar/util/hash_util.h"
+// #include "sylar/util/json_util.h"
+// #include "sylar/util/crypto_util.h"
 
 namespace sylar {
 
@@ -294,7 +305,7 @@ const char* TypeToName() {
     return s_name;
 }
 
-//std::string PBToJsonString(const google::protobuf::Message& message);
+std::string PBToJsonString(const google::protobuf::Message& message);
 
 template<class Iter>
 std::string Join(Iter begin, Iter end, const std::string& tag) {
@@ -427,34 +438,25 @@ std::string Formatv(const char* fmt, va_list ap);
 
 template<class T>
 void Slice(std::vector<std::vector<T> >& dst, const std::vector<T>& src, size_t size) {
-    // 初始化左边界和右边界
     size_t left = src.size();
     size_t pos = 0;
-    // 当左边界大于等于size时，循环执行
     while(left > size) {
-        // 初始化一个大小为size的vector
         std::vector<T> tmp;
         tmp.reserve(size);
-        // 将src中pos到pos+size的数据添加到tmp中
         for(size_t i = 0; i < size; ++i) {
             tmp.push_back(src[pos + i]);
         }
-        // 将tmp添加到dst中
         pos += size;
         left -= size;
         dst.push_back(tmp);
     }
 
-    // 当右边界大于0时，循环执行
     if(left > 0) {
-        // 初始化一个大小为left的vector
         std::vector<T> tmp;
         tmp.reserve(left);
-        // 将src中pos到pos+left的数据添加到tmp中
         for(size_t i = 0; i < left; ++i) {
             tmp.push_back(src[pos + i]);
         }
-        // 将tmp添加到dst中
         dst.push_back(tmp);
     }
 }

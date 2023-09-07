@@ -1,0 +1,3 @@
+/home/ubuntu/zp/code/mysylar/test/build/CMakeFiles/test_log.dir
+/home/ubuntu/zp/code/mysylar/test/build/CMakeFiles/edit_cache.dir
+/home/ubuntu/zp/code/mysylar/test/build/CMakeFiles/rebuild_cache.dir
