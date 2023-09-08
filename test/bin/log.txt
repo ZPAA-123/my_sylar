@@ -1,0 +1,4 @@
+2023-09-09 00:32:15	ERROR	test macro error
+2023-09-09 00:32:15	ERROR	test macro fmt error aa
+2023-09-09 00:35:04	ERROR	test macro error
+2023-09-09 00:35:04	ERROR	test macro fmt error aa

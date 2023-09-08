@@ -18,6 +18,14 @@ add_library(mysylar SHARED
     timer.cc
     util.cc)
 
+set(LIB 
+    dl
+    pthread
+    yaml-cpp
+    jsoncpp)
+
+target_link_libraries(mysylar ${LIB})
+
 set_target_properties(mysylar PROPERTIES LIBRARY_OUTPUT_DIRECTORY 
     ${PROJECT_SOURCE_DIR}/test)
     

@@ -1,3 +1,0 @@
-/home/ubuntu/zp/mysylar/my_sylar/test/build/CMakeFiles/rebuild_cache.dir
-/home/ubuntu/zp/mysylar/my_sylar/test/build/CMakeFiles/edit_cache.dir
-/home/ubuntu/zp/mysylar/my_sylar/test/build/CMakeFiles/my_project.dir
