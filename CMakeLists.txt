@@ -19,6 +19,5 @@ add_library(mysylar SHARED
     util.cc)
 
 set_target_properties(mysylar PROPERTIES LIBRARY_OUTPUT_DIRECTORY 
-    ${CMAKE_CURRENT_SOURCE_DIR}/test)
+    ${PROJECT_SOURCE_DIR}/test)
     
-target_include_directories(mysylar PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)

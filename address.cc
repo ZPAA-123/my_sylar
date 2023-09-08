@@ -5,7 +5,7 @@
 #include <ifaddrs.h>
 #include <stddef.h>
 
-#include "endian.h"
+#include "myendian.h"
 
 namespace sylar {
 
